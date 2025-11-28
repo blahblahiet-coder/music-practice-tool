@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Geist", sans-serif;
+    font-size: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+:root {
+    --purple: #1b345b;
+    --green: #238063;
+    --greenChecked: #d68f3a;
+    --lightBlue: #254779;
+}
+
+body {
+    margin: 10px;
+    background-color: var(--purple)
+}
+
+.specificKeySection {
+    background-color: #254779;
+    border-radius: 20px;
+    padding: 5px;
+    padding-bottom: 0;
+}
+
+.heading {
+    font-family: "Unbounded", sans-serif;
+    font-size: 29px;
+    font-weight: bolder;
+    margin: 30px 0 10px 0;
+}
+
+.specificHeading {
+    margin: 0 0 0 0;
+}
+
+.mainHeading {
+    font-size: 35px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.button {
+    background-color: var(--green);
+    padding: 5px;
+    border-radius: 15px;
+    font-weight: bold;
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+}
+
+.numberInput {
+    background-color: var(--lightBlue);
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    margin-top: 8px;
+    opacity: 100%;
+}
+
+.numberInput::placeholder {
+    color: white;
+    opacity: 80%;
+}
+
+label {
+    font-weight: bold;
+}
+
+.selectedKeysSection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.selectedKey {
+    border: 2px solid white;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 48.5%;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked+label {
+    background-color: var(--greenChecked);
+}
+
+input[type=checkbox]:checked+label {
+    background-color: var(--greenChecked);
+}
+
+input[type=checkbox]+label {
+    background-color: var(--green);
+    border-radius: 10px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+select {
+    background-color: var(--purple);
+    border-radius: 7px;
+}
+
+.selectedKeyText {
+    font-size: 26.5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exerciseTypesSections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.exerciseType,
+.minorType {
+    padding: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 47%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.advancedArticle,
+.inversionsArticle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    margin-top: 20px;
+}
+
+.advancedSection,
+.minorTypeSection {
+    background-color: var(--lightBlue);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.minorTypeSection {
+    margin-top: 20px;
+}
+
+.minorHeading {
+    margin-top: 0;
+}
+
+.clear,
+.generate {
+    width: 49%;
+    margin-bottom: 20px;
+    font-size: 27px;
+    margin-top: 20px;
+    height: 48.8px
+}
+
+.practiceSection {
+    background-color: var(--lightBlue);
+    border-radius: 20px;
+}
+
+.keysInitial,
+.clearGenerateSection {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.initialKey {
+    width: 49%;
+}
+
+.innerPracticeSection * {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 40px;
+}
+
+.practiceHeading {
+    font-size: 35px;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.addKeyButton {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.numberSection {
+    padding-top: 10px;
+}
+
+.remove {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.backToTop {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.buttonSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.finalText {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 35px;
+    padding: 0 10px;
+    color: var(--greenChecked);
+}
+
+.error {
+    color: #f55959;
+}
+
+@media screen and (max-width:350px) {
+    .selectedKeyText {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:701px) {
+
+    .minorType,
+    .exerciseType {
+        width: 32%;
+    }
+
+    .innerPracticeSection {
+        padding-left: 35px;
+    }
+
+    .selectedKey {
+        width: 32%;
+    }
+
+    .selectedKeysSection {
+        justify-content: flex-start;
+        gap: 2%;
+    }
+}
+
+@media screen and (min-width:701px) {
+    body {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .mainApp {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .section1 {
+        margin-right: 20px;
+    }
+
+    .practiceSection {
+        margin: 10px 0;
+        padding: 20px 0;
+        height: fit-content;
+        padding-left: 25px;
+    }
+
+    .practiceHeading {
+        padding: 0 5px;
+        margin-top: 0;
+    }
+
+    .minorHeading {
+        font-size: min(3.3vw, 30px);
+        /*doesn't allow font to exceed 30px*/
+    }
+
+    .buttonSection {
+        display: none;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:519px) {
+    .selectedKeyText {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width:1015px) {
+
+    .minorType,
+    .exerciseType {
+        width: 32%;
+    }
+
+    .selectedKey {
+        width: 32%;
+    }
+
+    .selectedKeysSection {
+        justify-content: flex-start;
+        gap: 2%;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}

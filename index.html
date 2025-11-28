@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Practice Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./images/logo.png">
+</head>
+
+<body id="body">
+    <h1 class="mainHeading heading">Practice Tool</h1>
+    <main class="mainApp">
+        <section class="section1">
+            <!--Key Section-->
+            <h2 class="heading">Select keys:</h2>
+            <section class="keysInitial">
+                <input type="radio" name="key" id="all" value="all" />
+                <label for="all" class="button initialKey">All</label>
+                <input type="radio" name="key" id="specific" value="specific" />
+                <label for="specific" class="button initialKey">Specific</label>
+            </section>
+
+
+            <section class="specificKeySection hide" id="specificKeySection">
+                <h2 class="heading specificHeading">Specific keys:</h2>
+                <article class="keySelectArticle">
+                    <!--key-->
+                    <label for="keySelect">Key:</label>
+                    <select id="keySelect">
+                        <option value="C">C</option>
+                        <option value="C#">C#</option>
+                        <option value="D">D</option>
+                        <option value="E♭">E♭</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="F#">F#</option>
+                        <option value="G">G</option>
+                        <option value="A♭">A♭</option>
+                        <option value="A">A</option>
+                        <option value="B♭">B♭</option>
+                        <option value="B">B</option>
+                    </select>
+                </article>
+
+                <!--tonality-->
+                <article class="tonalitySelectArticle">
+                    <label for="tonalitySelect">Tonality:</label>
+                    <select id="tonalitySelect">
+                        <option value="major">Major</option>
+                        <option value="minor">Minor</option>
+                    </select>
+                </article>
+
+                <button class="button addKeyButton" id="addKeyButton">Add Key</button>
+
+                <!--selected keys-->
+                <h2 class="heading">Selected Keys:</h2>
+                <section id='selectedKeysSection' class="selectedKeysSection">
+                </section>
+            </section>
+
+            <!--exercises type-->
+            <section class="exerciseTypesSection">
+                <h2 class="heading">Exercises Types</h2>
+                <input type="checkbox" name="exerciceType" id='arpeggio' class="exerciseTypeCheck" value="arpeggio">
+                <label class='exerciseType' for="arpeggio">Arpeggio</label>
+
+                <input type="checkbox" name="exerciceType" id="scale" class="exerciseTypeCheck" value="scale">
+                <label class='exerciseType' for="scale">Scale</label>
+
+                <input type="checkbox" name="exerciceType" id='chord' class="exerciseTypeCheck" value="chord">
+                <label class='exerciseType' for="chord">Chord</label>
+            </section>
+
+            <!--Minor Type Section-->
+            <section id='minorTypeSection' class="minorTypeSection hide">
+                <h2 class="heading minorHeading">Minor Scale Subtype</h2>
+                <input type="checkbox" name="minorType" id='natural' class='minorCheck' value="natural">
+                <label class='minorType' for="natural">Natural</label>
+
+                <input type="checkbox" name="minorType" id="harmonic" class='minorCheck' value="harmonic">
+                <label class='minorType' for="harmonic">Harmonic</label>
+
+                <input type="checkbox" name="minorType" id='melodic' class='minorCheck' value="melodic">
+                <label class='minorType' for="melodic">Melodic</label>
+            </section>
+
+            <!--Number input-->
+            <section class="numberSection">
+                <label class='numberInputLabel' for="number">Number of Items</label>
+                <input type="number" min=1 id="number" placeholder="Enter Number" class="numberInput" />
+            </section>
+
+            <!--advanced section-->
+            <article class="advancedArticle" id="advancedArticle">
+                <h2 class="heading">Advanced</h2>
+                <img id='arrow' src="./images/arrow-down.svg" class='arrow' alt="more" />
+            </article>
+
+            <section class="advancedSection hide" id="advancedSection">
+                <label for="octaveSelect">Octaves:</label>
+                <select id='octaveSelect' name="octaveSelect">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <article class="inversionsArticle" id="inversions">
+                    <p id="inversionsText">Allow Inversions</p>
+                    <img src="./images/checkbox-blank.svg" alt="check" id="checkPic">
+                </article>
+            </section>
+
+            <!--clear and generate buttons-->
+            <section class="clearGenerateSection">
+                <a href="#body" class="clear button" id="clearButton">Clear</a>
+                <a href="#practiceSection" class="generate button" id="generateButton">Generate</a>
+            </section>
+        </section>
+
+        <!--Final Results-->
+        <section id='practiceSection' class="practiceSection ">
+            <section class="innerPracticeSection">
+                <h1 class="mainHeading heading practiceHeading">Practice Schedule</h1>
+                <ol id="generatedList" class="hide">
+                </ol>
+            </section>
+            <p class="finalText" id="finalText">Fill Out All Inputs, Then Click 'Generate' to See Practice List</p>
+            <p class="finalText error hide" id="error">Please Fill Out All Inputs and Try Again</p>
+            <section class="buttonSection">
+                <a href="#body" class="generate backToTop button">Back to Top</a>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
